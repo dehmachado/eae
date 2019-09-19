@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Livro</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+        
+        <header class="menuPrincipal">
+                <div class="header1">
+                    
+                        <div class="logo">
+                            <img src= "https://i1.wp.com/www.emotioncard.com.br/wp-content/uploads/2017/09/caveira-pc-wallpaper.jpg?resize=696%2C392&ssl=1" width="100px" height="100px"  alt="Caveira">
+                        </div>
+                    </div>
+        </header>
+
+
+            
+        <div class="formulario" style="margin-left:40%; padding:10% 50px; height:100%; width: 250px">
+            
+            <form id="formu" name="formCadastro" action="index.html" method="POST" onsubmit="return validar()">
+                
+                <h3><strong>Cadastro de Livros</strong></h3>
+                <label><strong>Titulo</strong></label>
+                <input class="inp" type="text" name="titulo" placeholder="Informe o titulo"><br>
+                
+                <label><strong><br>Autor</strong></label>
+                <input class="inp" type="number" name="autor" placeholder="Informe o autor"><br>
+                
+                
+                <label ><strong><br>Origem</strong></label>
+                <input type="radio" name="origem" value="Nacional" checked="checked" />Nacional
+                <input type="radio" name="origem" value="internacional" checked="checked" />Internacional<br>
+
+                <label><strong><br>Gênero</strong></label>
+                <select name="genero" id="">
+                    <option value="romance">Romance</option>
+                    <option value="fabula">Fábula</option>
+                    <option value="cronica">Crônica;</option>
+                    <option value="conto">Conto</option>
+                </select><br>
+
+                <label ><strong><br>Publicação<br></strong></label>
+                <input type="date" name="publicacao"><br><br>
+
+                
+                <input id="botao" type="submit" name="enviar" value="Salvar">
+
+                <!--Submit = ação de enviar algo-->
+                <input id="botao" type="reset" name="cancela" value="Cancelar">
+                
+
+            </form>
+        </div>
+
+        <footer>
+            <p>Contato: <a href="dz2097@gmail.com">dz2097@gmail.com</a>.</p>
+
+        </footer>
+        
+
+    </body>
+
+    <script type="text/javascript">
+        function validar(){
+            var formulario = document.forms["formCadastro"];
+            var titulo = formulario.titulo.value;
+            var autor = formulario.autor.value;
+            var origem = formulario.origem.value;
+            var genero = formulario.genero.value;
+            var publicacao = formulario.publicacao.value;
+
+            var erro = false;  //false = não tem erro
+
+            if(erro){    //se houver erro, retorna falso
+                return false;
+
+            }else{
+                if(titulo.indexOf(" ") == -1){
+                alert("Preencha o titulo!");
+                erro = true;  //erro identificado
+                }
+                if(autor.indexOf(" ") == -1){
+                    alert("Preencha o autor!");
+                    erro = true;  //erro identificado
+                }
+                if(genero.indexOf(" ") == -1){
+                    alert("Preencha o genero!");
+                    erro = true;  //erro identificado
+                }
+            
+        }
+    </script>
+
+</html>

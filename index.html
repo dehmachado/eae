@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+
+    <body>
+        
+        <header class="menuPrincipal">
+
+            <nav>
+                <div class="header1">
+                    
+                    <div class="logo">
+                        <img src= "https://i1.wp.com/www.emotioncard.com.br/wp-content/uploads/2017/09/caveira-pc-wallpaper.jpg?resize=696%2C392&ssl=1" width="100px" height="100px"  alt="Caveira">
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+
+        <div style="margin-left:0%;padding:1px 16px;height:1000px;">
+            <h2>Lista de livros</h2>
+
+            <table>
+                <tr style="background-color: rgb(110, 174, 190)">
+                    <th>Atualização</th>
+                    <th>Autor</th>
+                    <th>Título</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Monteiro Lobato</td>
+                    <td>Urupês</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>José de Alencar</td>
+                    <td>IKEA Furniture, Spotify</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Cecilia Meireles</td>
+                    <td>Espectros</td>
+                </tr>
+                
+            </table>
+        </div>
+              
+
+        <footer>
+            <p>Contato: <a href="dz2097@gmail.com">dz2097@gmail.com</a>.</p>
+
+        </footer>
+
+    </body>
+
+    <script type="text/javascript">
+        function validar(){
+            var formulario = document.forms["formCadastro"];
+            var nome = formulario.nome.value;
+            var cpf = formulario.cpf.value;
+            var sexo = formulario.sexo.value;
+            var perfil = formulario.perfil.value;
+
+            //alert(nome + cpf + sexo + perfil);    Mostra os dados inseridos no campo de alerta
+            //console.log(nome);   Mostra os dados inseridos no Inspecionador de pagina/elemento
+
+            //if(nome.indexOf(" ") >= 0){   se o indice for maior ou igual a zero, significa que tem espaço.....se for igual a -1, não tem nenhum espaço
+
+            var erro = false;  //false = não tem erro
+
+            if(nome.indexOf(" ") == -1){
+                alert("Preencha o nome completo!");
+                erro = true;  //erro identificado
+            }
+            if(cpf.lenght != 11){
+                alert("Preencha o CPF corretamente!");
+                erro = true;
+            }
+            if(perfil.lenght < 20){
+                alert("Digite pelo menos 20 caracterese!")
+                erro = true;
+            }
+            if(erro){    //se houver erro, retorna falso
+                return false;
+            }else{
+                return true;
+            }
+
+        }
+    </script>
+
+</html>
